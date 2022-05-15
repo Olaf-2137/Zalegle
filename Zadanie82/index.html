@@ -1,0 +1,28 @@
+<html>
+<head>
+<title> Przykład nr 4</title>
+ <script language="JavaScript">
+ function pushbutton() {
+ alert("Czesc !");}
+ </script>
+</head>
+<body>
+
+<script language="LiveScript">
+ document.write(`${'<p style="color: red;font-size: 1cm; font-family: Arial;">Ostatnio zmodyfikowany<br>'}${document.lastModified}${'<p<br>'}`)
+</script>
+<form>
+ <input type="button" name="Button1" value="Naciśnij mnie" onclick="pushbutton()">
+</form>
+<script language="JavaScript">
+ dzis = new Date()
+ document.write('<p style="color: green;font-size:1.5cm;font-family:Calibri"><br>Aktualny czas : ',dzis.getHours(),":",dzis.getMinutes(), "</p>")
+ document.write('<p style="color: blue;font-size:2cm;font-family: "Times New Roman""><br>Aktualna data : ',dzis.getMonth()+1,",",dzis.getDate(),",",dzis.getFullYear(), "</p>");
+ 
+ function nazwisko(){
+	window.open("nazwisko.html", "naziwsko",'toolbar=no,directories=yes,menubar=no,height=auto,width=auto,top=200,left=200');
+ }
+</script>
+<button onclick="nazwisko()">Kliknij</button>
+</body>
+</html>

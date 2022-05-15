@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+dzis_kow = new Date();
+document.write("<br>Aktualny czas : ",dzis_kow.getHours(),":",dzis_kow.getMinutes());
+function ban_start() // function dni_kowalski(dzien,miesiac,rok)
+{
+ start_kow = new Date();
+ poczatek_kow=start_kow.getTime()
+}
+function ban_stop(){
+	stop_kow = new Date();
+ koniec_kow=stop_kow.getTime()
+
+ roznica_kow=koniec_kow-poczatek_kow;
+ pokaz1.innerHTML=roznica_kow/1000+" s";
+
+}
+</script>
+</head>
+<body>
+<input type="button" name="Button1" value="START stoper" onclick="ban_start()">
+<input type="button" name="Button2" value="STOP stoper" onclick="ban_stop()">
+<table>
+ <tr id="pokaz1"></tr>
+</table>
+</body>
+
+</html>

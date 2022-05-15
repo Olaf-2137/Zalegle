@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript">
+	function buttonFunction(button)
+	{
+		let data = new Date()
+		switch (button){
+			case 1:
+				pokaz1.innerHTML="Ostatnio zmodyfikowany : "+document.lastModified;
+				break;
+			case 2:
+				pokaz2.innerHTML = `Aktualna data ${data.getDate()}.${data.getMonth() + 1}.${data.getFullYear()}`
+				break;
+			case 3:
+				pokaz3.innerHTML = `Aktualna czas ${data.getHours()}:${data.getMinutes()}`
+				break;
+		}
+	}
+</script>
+<style>
+button{
+	width: 200px;
+	height: 100px;
+	background-repeat: no-repeat;
+}
+
+button#last{
+	background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Button-Blue.svg/2048px-Button-Blue.svg.png');
+	background-position: center;
+	font-size: 30px;
+	color: red;
+}
+button#actual{
+	background: url('http://www.tecza-zakopane.pl/pl/images/banery/xbaner-02.jpg.pagespeed.ic.OgEXMz7XD5.jpg');
+	background-position: center;
+	font-size: 30px;
+	color: red;
+}
+
+button#actual_h{
+	background: url('https://bi.im-g.pl/im/a7/16/fa/z16389799IH,i-ytimg-com.jpg');
+	background-position: center;
+	font-size: 30px;
+	color: red;
+}
+button:hover{
+	border-radius: 80%;
+}
+</style>
+</head>
+<body>
+	<button id="last" onclick="buttonFunction(1)">Ostatnia data modyfikacji</button><br>
+	<button id="actual" onclick="buttonFunction(2)">Aktualna data</button><br>
+	<button id="actual_h" onclick="buttonFunction(3)">Aktualna godzina</button>
+	<table>
+		<tr id="pokaz1"></tr>
+		<tr id="pokaz2"></tr>
+		<tr id="pokaz3"></tr>
+		<h1> Wybierz przycisk ktury chcesz :) </h1>
+	</table>
+</body>
+
+</html>

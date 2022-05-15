@@ -1,0 +1,47 @@
+<html>
+<head>
+<script type="text/javascript">
+	function dzienTygodnia()
+	{
+		let dzisiaj = new Date()
+		let dzien = dzisiaj.getDay(), d_tyg = '';
+		
+		
+		switch (dzien){
+		
+			case 1:
+				d_tyg = 'Dziś Jest Poniedziałek';
+				break
+			case 2:
+				d_tyg = 'Dziś Jest Wtorek';
+				break
+			case 3:
+				d_tyg = 'Dziś Jest Środa';
+				break
+			case 4:
+				d_tyg = 'Dziś Jest Czwartek';
+				break
+			case 5:
+				d_tyg = 'Dziś Jest Piątek';
+				break
+			case 6:
+				d_tyg = 'Dziś Jest Sobota';
+				break
+			case 7:
+				d_tyg = 'Dziś Jest Niedziela';
+				break
+			default:
+				d_tyg = 'Blad'
+				
+		}
+		document.getElementById("wynik").innerHTML = `dzien=${d_tyg}`
+	}
+</script>
+</head>
+<body>
+	<h1> Wciśnij mnie by zobaczyć dzień tygodnia </h1>
+	<button onclick="dzienTygodnia()">Pokaz</button> 
+	<div id="wynik"></div>
+</body>
+
+</html>
